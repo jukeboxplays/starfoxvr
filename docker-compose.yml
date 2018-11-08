@@ -1,0 +1,35 @@
+version: '2'
+services:
+  front:
+    build: ./front
+    restart: always
+    volumes:
+      - ./front/code:/code
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+    ports:
+      - '5000:5000'
+    links:
+      - back:back
+  banco:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=815621
+    volumes:
+      - ./banco/entrypoint:/docker-entrypoint-initdb.d
+  back:
+    build: ./back
+    restart: always
+    volumes:
+      - ./back/code:/code
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+    links:
+      - banco:banco
+    command: [ "flask", "run", "--host=0.0.0.0"]
+    depends_on:
+      - banco

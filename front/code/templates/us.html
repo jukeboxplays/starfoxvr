@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<!-- Introdução -->
+      <h1 class="my-4">Sobre os Criadores
+        <small>Conheca um pouco de cada</small>
+      </h1>
+      <p>Uma equipe pronta para recriar o StarFox VR, mas isso em somente um semestre e um óculos de realidade virtual</p>
+
+      <!-- Membros do Time (linha) -->
+      <div class="row">
+       <!--Cria a linha da grid que será criada na classe abaixo-->
+        <div class="col-lg-12">
+	<!--a classe de Bootstrap col-lg-12 criará grids (o que ajuda a versatilidade de redimensionamento de resolução de dispositivos, ex. de desktop para mobile)-->
+          <h2 class="my-4">A equipe</h2>
+	  <!--my-4 configura o espaçamento de top e/ou bottom-->
+
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+	<!--a classe de Bootstrap col-lg-12 criará grids e col-sm-6 define para tablet e mb-4 para mobiles, também temos text-center antes do mobile, para que o texto seja centralizado dentro da coluna, todos são cargas/parametros da criação da grid(o que ajuda a versatilidade de redimensionamento de resolução de dispositivos, ex. de desktop para mobile)-->
+          <img class="rounded-circle img-fluid d-block mx-auto" src="https://i.imgur.com/kNCVTkx.png" alt="">
+	  <!--rounded-circle cria um circulo totalmente redondo, img-fluid faz a imagem ser responsíva (ou seja, irá acompanhar o tamanho da tag body, dando-se o nome de imagem responsíva), d-block faz o objeto virar um elemento do block (bloco), mx-auto define as margens esquerda e direita automaticamente, src define o endereço de origem/fonte/curso da imagem e alt define o texto alternativo-->
+          <h3>Vinicius Rezende
+            <p><small>Lead & Back-end</small></p>
+          </h3>
+          <p>Lider do grupo. Desenvolvedor Unity e exp. em web Back-End.</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+	<!--a classe de Bootstrap col-lg-12 criará grids e col-sm-6 define para tablet e mb-4 para mobiles, também temos text-center antes do mobile, para que o texto seja centralizado dentro da coluna, todos são cargas/parametros da criação da grid(o que ajuda a versatilidade de redimensionamento de resolução de dispositivos, ex. de desktop para mobile)-->
+          <img class="rounded-circle img-fluid d-block mx-auto" src="https://i.imgur.com/nZxcjKs.png" alt="">
+	  <!--rounded-circle cria um circulo totalmente redondo, img-fluid faz a imagem ser responsíva (ou seja, irá acompanhar o tamanho da tag body, dando-se o nome de imagem responsíva), d-block faz o objeto virar um elemento do block (bloco), mx-auto define as margens esquerda e direita automaticamente, src define o endereço de origem/fonte/curso da imagem e alt define o texto alternativo-->
+          <h3>Carlos Augusto
+            <p><small>VR Dev. & Front-end</small></p>
+          </h3>
+          <p>Desenvolvedor Unity, VR Designer e pupilo web front-end</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+	<!--a classe de Bootstrap col-lg-12 criará grids e col-sm-6 define para tablet e mb-4 para mobiles, também temos text-center antes do mobile, para que o texto seja centralizado dentro da coluna, todos são cargas/parametros da criação da grid(o que ajuda a versatilidade de redimensionamento de resolução de dispositivos, ex. de desktop para mobile)-->
+          <img class="rounded-circle img-fluid d-block mx-auto" src="https://3.bp.blogspot.com/-lydbYdDYc00/WqGb1IYTmSI/AAAAAAAA63g/KKYhE656T5k7fSe6bHhxXQyKKPtQ5_U1QCLcBGAs/s200/3379.jpg" alt="">
+	  <!--rounded-circle cria um circulo totalmente redondo, img-fluid faz a imagem ser responsíva (ou seja, irá acompanhar o tamanho da tag body, dando-se o nome de imagem responsíva), d-block faz o objeto virar um elemento do block (bloco), mx-auto define as margens esquerda e direita automaticamente, src define o endereço de origem/fonte/curso da imagem e alt define o texto alternativo-->
+          <h3>Luis Fernando
+            <p><small>Multiplayer Designer</small></p>
+          </h3>
+          <p>(Membro em discussão) Desenvolvedor Unity e socket guy</p>
+        </div>
+     
+{% endblock %}

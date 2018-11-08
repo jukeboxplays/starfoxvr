@@ -1,0 +1,76 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+User
+{% endblock %}
+
+{% block head %}
+
+    
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+
+    
+    <link href="{{ url_for('static', filename='css/full-slider.css') }}" rel="stylesheet">
+    <!-- Estilos customizados para os templates encontrados na pasta "/static/css", neste caso, somente o arquivo "full-slider.css" na qual encontra-se o estilo "carousel" para slides -->
+
+{% endblock %}
+
+
+    {% block navbar %}
+    <div class="container">
+    <!--Container de alinhamento para layout da pagina-->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+      <!--Container de alinhamento para layout da pagina-->
+        <a class="navbar-brand" href="/">Quase StarFox mas VR</a>
+	<!--navbar é uma classe para criar cabeçalhos de navegação responsívos-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	<!--O botão é criado e nele temos parametros/cargas, navbar-toggler é para alterar o modo de uso (os comportamentos), button transforma em botão, collapse agrupamento dos conteúdos navbar e os(as) outros(as) parametros/cargas trabalham com a responsividade e funcionalidade da navbar -->
+          <span class="navbar-toggler-icon"></span>
+	  <!--Agrupa o ícone e altera o mesmo-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+	<!--Criamos novos navbars-->
+          <ul class="navbar-nav ml-auto">
+	  <!--altera o posicionamento da navbar automaticamente-->
+             <li class="nav-item active"><a class="nav-link" href="/about">O Jogo</a></li>
+	     <li class="nav-item active"><a class="nav-link" href="/download">Baixar</a></li>
+	     <li class="nav-item active"><a  class="nav-link" href="/us">Quem Somos</a></li>
+	     <!--Cria itens navbars ativos e com funcionalidade de redirecionamento para algum link, no caso dessas navbars, elas redirecionam para subpáginas-->
+              
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+{% endblock %}
+
+{% block content %}
+     <div class="container" style="padding-top: 65px">
+     <!--Container de alinhamento para layout da pagina e o padding-top define o espaçamento do padding (espaçamento de conteúdos/elementos)-->
+
+    {% block page_content %}
+	{% endblock %}
+	
+     </div>
+
+     <!-- Footer (Rodapé Principal) -->
+    <footer class="footer py-5 bg-dark bottom">
+      <div class="container">
+      <!--Container de alinhamento para layout da pagina-->
+        <p class="m-0 text-center text-white">Copyleft &copy; FATEC 2018</p>
+	<!--Footer (Rodapé Principal) presente em todas as páginas-->
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    
+     {% endblock %}
+
+
+{% block scripts %}
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>   
+{% endblock %}

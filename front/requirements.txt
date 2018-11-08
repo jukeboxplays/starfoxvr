@@ -1,0 +1,4 @@
+Flask
+flask-bootstrap
+requests
+flask-wtf
