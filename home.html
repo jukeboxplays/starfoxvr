@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<!--Bloco com conteúdo da página-->
+
+    <header>
+      <div id="carouselClasse" class="carousel slide" data-ride="carousel">
+      <!-- Foi criado id para referenciar nos controles que esta no final do codigo e a classe carousel especifica que div contem carousel com a classe CSS slide e data-ride faz com que carousel carrega imediatamente que a pagina for aberta -->
+        <ol class="carousel-indicators">
+	<!--Aqui definimos os pontos que indicam onde estamos no carousel-->
+          <li data-target="#carouselClasse" data-slide-to="0" class="active"></li>
+	  <!--active é nescenário para precisa ser adicionado para um dos botões para termos um ponto de partida que inicia ativo-->
+          <li data-target="#carouselClase" data-slide-to="1"></li>
+          <li data-target="#carouselClasse" data-slide-to="2"></li>
+	  <!--data-target referencia Classe e data-slide-to para qual slide ir-->
+        </ol>
+        <div class="carousel-inner">
+	<!--Dentro desse div iremos modelar os slides-->
+            <div class="carousel-item active" style="background-image: url('https://i.imgur.com/DCN0Xhi.png')">
+	    <!--Items pode conter imagens e textos e active é nescenário para termos um ponto de partida que inicia ativo-->
+            <div class="carousel-caption">
+	    <!--O objetivo do caption é separar os slides por items-->
+	      <h3 style="color:black;">Premissa</h3>
+              <p style="color:white;">Inspirado em StarFox, embarque numa aventura CO-OP.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('https://i.imgur.com/FWg9qfh.png')">
+	    <!--Items pode conter imagens e textos-->
+            <div class="carousel-caption">
+	    <!--O objetivo do caption é separar os slides por items-->
+              <h3 style="color:black;">Gameplay</h3>
+              <p style="color:black;">Este Rail-Shooter ganha vida com uma exclusividade CO-OP em PC e VR</p>
+            </div>
+          </div>
+           <div class="carousel-item" style="background-image: url('https://i.imgur.com/FZQvfWw.png')">
+	   <!--Items pode conter imagens e textos-->
+            <div class="carousel-caption">
+	    <!--O objetivo do caption é separar os slides por items-->
+              <h3 style="color:black;">Desenvolvimento</h3>
+              <p style="color:black;">Criado em Unity, o jogo irá dispor de gráficos fantásticos e mecânicas criadas em C#</p>
+            </div>
+          </div>
+        </div>
+
+	<!--Controles de esquerda e direita com referencia da classe que criamos para que o conteudo dela "escorregar" para o lado conforme botões que serão criados abaixo com data-slide definido para "prev" e "next"-->
+        <a class="carousel-control-prev" href="#carouselClasse" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+	  <!--aqui é definido o icone do botao-->
+          <span class="sr-only">Previous</span>
+	  <!--A última linha indica qual lado estamos indo (Previous (anterior))-->
+        </a>
+        <a class="carousel-control-next" href="#carouselClasse" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span>
+	  <!--A última linha indica qual lado estamos indo (Next (próxima))-->
+        </a>
+      </div>
+    </header>
+
+
+{% endblock %}
